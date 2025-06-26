@@ -1,0 +1,20 @@
+[
+    {
+        "filename": "index.html",
+        "template": "index.tpl",
+        "title": "トップページ",
+        "description": "ようこそ、プロ仕様サイトへ"
+    },
+    {
+        "filename": "about.html",
+        "template": "about.tpl",
+        "title": "会社概要",
+        "description": "当社のミッションとビジョン"
+    },
+    {
+        "filename": "contact.html",
+        "template": "contact.tpl",
+        "title": "お問い合わせ",
+        "description": "お気軽にご連絡ください"
+    }
+]
