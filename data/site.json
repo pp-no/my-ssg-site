@@ -1,0 +1,98 @@
+{
+  "site": {
+    "title": "FASHION HOLIDAY CAMPAIGN | 公式LP",
+    "description": "エントリー＆ご利用で最大2,000ポイント。ファッションをもっと自由に。",
+    "baseUrl": "https://example.com/",
+    "copyright_year": "2025",
+    "ogp_image": "https://placehold.co/1200x630/png?text=OGP+1200x630"
+  },
+  "brand": {
+    "name": "〇〇FASHION",
+    "company": "〇〇Inc.",
+    "logo": "https://placehold.co/160x40/svg?text=LOGO"
+  },
+  "assets": {
+    "css_reset": "/public/css/reset.css",
+    "css_app": "/public/css/app.css",
+    "kv": "https://picsum.photos/seed/fashion-kv/800/520",
+    "kv_2x": "https://picsum.photos/seed/fashion-kv-2x/1600/1040"
+  },
+  "hero": {
+    "title": "いま欲しいを、わたしらしく。",
+    "subtitle": "対象ブランドでの購入＆エントリーでポイントプレゼント",
+    "kv_alt": "最新トレンドのコーディネートイメージ"
+  },
+  "campaign": {
+    "is_new": true,
+    "is_ended": false,
+    "period": "2025年9月6日〜2025年10月31日",
+    "copy": "エントリー＆ご利用で最大2,000ポイント",
+    "benefit": "最大2,000pt進呈",
+    "note": "※進呈条件・上限があります。詳細はFAQをご確認ください。",
+    "ended_message": "たくさんのご参加ありがとうございました。次回キャンペーンにご期待ください。",
+    "archive_url": "/archive/fashion-cp-2024",
+    "details": [
+      { "term": "期間", "value": "2025年9月6日（土）〜 2025年10月31日（金）" },
+      { "term": "特典", "value": "エントリー＆対象購入で最大2,000ポイント" },
+      { "term": "付与時期", "value": "条件達成の翌月末までに順次付与" },
+      {
+        "term": "対象",
+        "value": "期間中にエントリーのうえ、対象ブランドでの購入"
+      }
+    ]
+  },
+  "features": [
+    {
+      "title": "最新トレンド",
+      "text": "人気スタイリスト監修のおすすめコーデを毎週更新。"
+    },
+    {
+      "title": "おトクが続く",
+      "text": "購入金額に応じてポイントアップ。会員限定クーポンも。"
+    },
+    {
+      "title": "サイズ安心",
+      "text": "初回サイズ交換送料無料（一部対象外あり）。"
+    }
+  ],
+  "sections": {
+    "features_title": "選ばれる3つの理由",
+    "detail_title": "キャンペーン詳細",
+    "faq_title": "よくある質問"
+  },
+  "entry": {
+    "action": "https://example.com/entry",
+    "extra_fields": [
+      {
+        "type": "select",
+        "name": "pref",
+        "label": "都道府県",
+        "options": [
+          { "label": "東京都", "value": "tokyo" },
+          { "label": "神奈川県", "value": "kanagawa" },
+          { "label": "千葉県", "value": "chiba" },
+          { "label": "埼玉県", "value": "saitama" }
+        ]
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": "ポイントはいつ反映されますか？",
+      "a": "条件達成の翌月末までに順次進呈します。"
+    },
+    {
+      "q": "返品・キャンセル時はどうなりますか？",
+      "a": "キャンセル・返品分は対象外となります。"
+    },
+    {
+      "q": "既存会員も対象ですか？",
+      "a": "エントリーのうえ対象購入された方が対象です。"
+    }
+  ],
+  "links": {
+    "privacy": "/privacy",
+    "terms": "/terms",
+    "inquiry": "/inquiry"
+  }
+}

@@ -1,31 +1,211 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <title>トップページ</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<header>
-    <h1>企業サイト</h1>
-    <nav>
-        <a href="index.html">ホーム</a>
-        <a href="about.html">会社概要</a>
-        <a href="contact.html">お問い合わせ</a>
-    </nav>
-</header>
+  <title>FASHION HOLIDAY CAMPAIGN | 公式LP</title>
+  <meta name="description" content="エントリー＆ご利用で最大2,000ポイント。ファッションをもっと自由に。" />
 
-<main>
+      <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://placehold.co/1200x630/png?text=OGP+1200x630" />
+  
     
-    <h2>トップページ</h2>
-    <p>ようこそ、プロ仕様サイトへ</p>
+      <meta property="og:image" content="https://placehold.co/1200x630/png?text=OGP+1200x630" />
+    <link rel="preload" as="image"
+        href="https://picsum.photos/seed/fashion-kv-2x/1600/1040"
+        imagesrcset="https://picsum.photos/seed/fashion-kv/800/520 1x, https://picsum.photos/seed/fashion-kv-2x/1600/1040 2x" />
+  <link rel="stylesheet" href="/public/css/reset.css" />
+  <link rel="stylesheet" href="/public/css/app.css" />
+  <link rel="stylesheet" href="./css/style.css" />
 
-</main>
 
-<footer>
-    &copy; 2025 企業サイト All rights reserved.
-</footer>
+</head>
+<body class="">
+  
+  
 
-</body>
+    <header aria-label="ヘッダー">
+    <div class="container header-inner">
+      <a class="brand" href="https://example.com/" aria-label="トップへ">
+                  <img src="https://placehold.co/160x40/svg?text=LOGO" alt="〇〇FASHION" />
+                <span>〇〇FASHION</span>
+                  <span class="label label--new">NEW</span>
+              </a>
+
+      <nav>
+                  <a class="cta" href="#entry" aria-label="今すぐエントリー">今すぐエントリー</a>
+              </nav>
+    </div>
+  </header>
+
+    <section class="hero" aria-label="キービジュアル">
+    <div class="container hero-inner">
+      <div>
+        <h1>
+          いま欲しいを、わたしらしく。        </h1>
+                  <p class="sub">対象ブランドでの購入＆エントリーでポイントプレゼント</p>
+        
+                              <p class="sub"><strong>エントリー＆ご利用で最大2,000ポイント</strong></p>
+                                <ul class="note" aria-label="キャンペーン概要">
+              <li>実施期間：2025年9月6日〜2025年10月31日</li>
+            </ul>
+                    <p style="margin-top:16px">
+            <a class="cta" href="#entry">エントリーして特典を受け取る</a>
+          </p>
+              </div>
+
+      <figure class="kv">
+        <img src="https://picsum.photos/seed/fashion-kv/800/520"
+             srcset="https://picsum.photos/seed/fashion-kv/800/520 1x, https://picsum.photos/seed/fashion-kv-2x/1600/1040 2x"
+             alt="最新トレンドのコーディネートイメージ"
+             width="800" height="520" loading="eager" />
+      </figure>
+    </div>
+  </section>
+
+      <section class="section" id="features" aria-label="特長">
+    <div class="container">
+      <h2>選ばれる3つの理由</h2>
+      <div class="grid-3">
+                  <article class="card">
+            <h3>最新トレンド</h3>
+            <p>人気スタイリスト監修のおすすめコーデを毎週更新。</p>          </article>
+                  <article class="card">
+            <h3>おトクが続く</h3>
+            <p>購入金額に応じてポイントアップ。会員限定クーポンも。</p>          </article>
+                  <article class="card">
+            <h3>サイズ安心</h3>
+            <p>初回サイズ交換送料無料（一部対象外あり）。</p>          </article>
+              </div>
+    </div>
+  </section>
+  
+    <section class="section" id="campaign" aria-label="キャンペーン詳細">
+    <div class="container">
+      <h2>キャンペーン詳細</h2>
+      <div class="details" role="region" aria-labelledby="campaign">
+        <dl>
+                                    <dt>期間</dt><dd>2025年9月6日（土）〜 2025年10月31日（金）</dd>
+                          <dt>特典</dt><dd>エントリー＆対象購入で最大2,000ポイント</dd>
+                          <dt>付与時期</dt><dd>条件達成の翌月末までに順次付与</dd>
+                          <dt>対象</dt><dd>期間中にエントリーのうえ、対象ブランドでの購入</dd>
+                              </dl>
+      </div>
+      <p class="note" style="margin-top:10px">※進呈条件・上限があります。詳細はFAQをご確認ください。</p>    </div>
+  </section>
+
+    <section class="section" id="entry" aria-label="エントリー">
+    <div class="container">
+      <h2>今すぐエントリー</h2>
+
+              <p>以下のフォームに必要事項をご入力ください。</p>
+        <form action="https://example.com/entry" method="post" novalidate class="card" style="display:grid;gap:12px">
+          <label>
+            <span>お名前（必須）</span><br />
+            <input type="text" name="name" required aria-required="true" style="width:100%;padding:12px;border:1px solid var(--c-border);border-radius:10px" />
+          </label>
+          <label>
+            <span>メールアドレス（必須）</span><br />
+            <input type="email" name="email" required aria-required="true" style="width:100%;padding:12px;border:1px solid var(--c-border);border-radius:10px" />
+          </label>
+
+                                    <label>
+                <span>都道府県</span><br />
+                                  <select name="pref" style="width:100%;padding:12px;border:1px solid var(--c-border);border-radius:10px">
+                    <option value="">選択してください</option>
+                                          <option value="tokyo">東京都</option>
+                                          <option value="kanagawa">神奈川県</option>
+                                          <option value="chiba">千葉県</option>
+                                          <option value="saitama">埼玉県</option>
+                                      </select>
+                              </label>
+                      
+          <label style="display:flex;gap:8px;align-items:center">
+            <input type="checkbox" name="agree" value="1" required aria-required="true" />
+            <span>利用規約に同意する</span>
+          </label>
+          <button class="cta" type="submit" style="justify-self:start">エントリーする</button>
+          <p class="note">※送信によりプライバシーポリシーに同意したものとみなします。</p>
+        </form>
+          </div>
+  </section>
+
+      <section class="section faq" id="faq" aria-label="よくある質問">
+    <div class="container">
+      <h2>よくある質問</h2>
+              <details>
+          <summary>ポイントはいつ反映されますか？</summary>
+          <div style="margin-top:8px">条件達成の翌月末までに順次進呈します。</div>
+        </details>
+              <details>
+          <summary>返品・キャンセル時はどうなりますか？</summary>
+          <div style="margin-top:8px">キャンセル・返品分は対象外となります。</div>
+        </details>
+              <details>
+          <summary>既存会員も対象ですか？</summary>
+          <div style="margin-top:8px">エントリーのうえ対象購入された方が対象です。</div>
+        </details>
+          </div>
+  </section>
+  
+    <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center">
+        <div>© 2025 〇〇Inc.</div>
+        <nav style="display:flex;gap:16px">
+          <a href="/privacy" class="small">プライバシーポリシー</a>          <a href="/terms" class="small">利用規約</a>          <a href="/inquiry" class="small">お問い合わせ</a>        </nav>
+      </div>
+    </div>
+  </footer>
+
+      <script type="application/ld+json">  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "〇〇Inc.",
+        "url": "https://example.com/",
+        "logo": "https://placehold.co/160x40/svg?text=LOGO"
+      },
+      {
+        "@type": "WebPage",
+        "name": "FASHION HOLIDAY CAMPAIGN | 公式LP",
+        "url": "https://example.com/",
+        "description": "エントリー＆ご利用で最大2,000ポイント。ファッションをもっと自由に。",
+        "inLanguage": "ja"
+      }
+            ,{
+        "@type": "FAQPage",
+        "mainEntity": [
+                    {
+            "@type": "Question",
+            "name": "ポイントはいつ反映されますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "条件達成の翌月末までに順次進呈します。"
+            }
+          },                    {
+            "@type": "Question",
+            "name": "返品・キャンセル時はどうなりますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "キャンセル・返品分は対象外となります。"
+            }
+          },                    {
+            "@type": "Question",
+            "name": "既存会員も対象ですか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "エントリーのうえ対象購入された方が対象です。"
+            }
+          }                  ]
+      }
+          ]
+  }
+  </script>
+
+
+
+  </body>
 </html>

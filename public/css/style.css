@@ -1,33 +1,207 @@
+/* ページ固有の最小スタイル（必要に応じて app.css へ） */
+:root {
+  --c-bg: #fff;
+  --c-text: #111;
+  --c-accent: #111;
+  --c-muted: #666;
+  --c-border: #e5e5e5;
+  --c-surface: #fafafa;
+}
 body {
-    font-family: Arial, sans-serif;
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1rem;
-    background: #f9f9f9;
-    color: #333;
+  background: var(--c-bg);
+  color: var(--c-text);
+}
+.container {
+  max-width: 1080px;
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  border-bottom: 1px solid var(--c-border);
+  z-index: 10;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+.brand img {
+  height: 28px;
+  width: auto;
+}
+.cta {
+  display: inline-block;
+  background: var(--c-text);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+.cta--ghost {
+  background: transparent;
+  border: 1px solid #111;
+  color: #111;
+}
+.hero {
+  background: linear-gradient(180deg, #fff, #fcfcfc);
+}
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 24px;
+  padding-block: 40px;
+}
+.hero h1 {
+  font-size: clamp(22px, 3.2vw, 36px);
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+.hero .sub {
+  color: var(--c-muted);
+  margin: 0 0 18px;
+}
+.kv {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+.section {
+  padding-block: 56px;
+  border-top: 1px solid var(--c-border);
+}
+.section h2 {
+  font-size: clamp(20px, 2.4vw, 28px);
+  margin: 0 0 20px;
+  letter-spacing: 0.04em;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.card {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  padding: 20px;
+  border-radius: 16px;
+}
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+.badge {
+  display: inline-block;
+  background: #111;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  margin-left: 8px;
+}
+.details dl {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  border: 1px solid var(--c-border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.details dt {
+  background: #fff;
+  padding: 14px;
+  border-bottom: 1px solid var(--c-border);
+}
+.details dd {
+  padding: 14px;
+  border-bottom: 1px solid var(--c-border);
+  margin: 0;
+}
+.details dt:last-of-type,
+.details dd:last-of-type {
+  border-bottom: none;
+}
+.note {
+  font-size: 12px;
+  color: var(--c-muted);
+}
+.faq details {
+  border: 1px solid var(--c-border);
+  border-radius: 12px;
+  padding: 14px;
+  background: #fff;
+}
+.faq details + details {
+  margin-top: 12px;
+}
+.faq summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.footer {
+  padding: 40px 0;
+  background: #111;
+  color: #fff;
+  margin-top: 40px;
+}
+.small {
+  font-size: 12px;
+  color: #c9c9c9;
+}
+.label {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+.label--new {
+  background: #111;
+  color: #fff;
+}
+.label--end {
+  background: #e60033;
+  color: #fff;
+}
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--c-border);
+  border-radius: 10px;
 }
 
-header, footer {
-    background: #333;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    margin: 0 1rem;
-    text-decoration: none;
-}
-
-h1, h2 {
-    color: #0066cc;
-}
-
-button {
-    background: #0066cc;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+  .details dl {
+    grid-template-columns: 1fr;
+  }
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+  header {
+    position: static;
+  }
 }

@@ -3,26 +3,6 @@
 主にHTMLテンプレートを元に、PHPで静的なHTMLファイルを自動生成する構成になっています。
 
 
-# フォルダ構成
-my-ssg-site/
-├── assets/
-│   ├── css/
-│   │   └── style.css      ← 手書きCSS
-│   └── images/
-├── build.php
-├── composer.json
-├── data/pages.json
-├── public/
-│   ├── index.html
-│   ├── about.html
-│   ├── contact.html
-│   └── css/
-│       └── style.css      ← コピー結果
-├── src/ssg.php
-├── templates/
-├── templates_c/
-└── vendor/
-
 # 静的サイトジェネレータ（SSG） - Smarty × PHP版
 
 本プロジェクトは、PHPテンプレートエンジン「Smarty」と独自PHPスクリプトを用いた静的HTML生成（SSG）のサンプルです。
