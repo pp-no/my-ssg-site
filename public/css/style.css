@@ -28,6 +28,8 @@ header {
   align-items: center;
   justify-content: space-between;
   height: 64px;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 .brand {
   display: flex;
@@ -189,6 +191,9 @@ textarea {
 }
 
 @media (max-width: 900px) {
+  .header-inner {
+    margin-bottom: 40px;
+  }
   .hero-inner {
     grid-template-columns: 1fr;
   }
