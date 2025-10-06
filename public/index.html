@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="/public/css/reset.css" />
   <link rel="stylesheet" href="/public/css/app.css" />
   <link rel="stylesheet" href="./css/style.css" />
-
+  
 
 </head>
 <body class="">
@@ -28,30 +28,32 @@
     <header aria-label="ヘッダー">
     <div class="container header-inner">
       <a class="brand" href="https://example.com/" aria-label="トップへ">
-                  <img src="https://placehold.co/160x40/svg?text=LOGO" alt="〇〇FASHION" />
+                  <img src="https://placehold.co/160x40/svg?text=LOGO" alt="〇〇FASHION" width="120" height="28" />
                 <span>〇〇FASHION</span>
-                  <span class="label label--new">NEW</span>
+                  <span class="label label--new" role="status">NEW</span>
               </a>
 
-      <nav>
+      <nav aria-label="メインナビゲーション">
                   <a class="cta" href="#entry" aria-label="今すぐエントリー">今すぐエントリー</a>
               </nav>
     </div>
   </header>
 
-    <section class="hero" aria-label="キービジュアル">
+    <section class="hero" aria-labelledby="hero-title">
     <div class="container hero-inner">
       <div>
-        <h1>
+        <h1 id="hero-title">
           いま欲しいを、わたしらしく。        </h1>
                   <p class="sub">対象ブランドでの購入＆エントリーでポイントプレゼント</p>
         
                               <p class="sub"><strong>エントリー＆ご利用で最大2,000ポイント</strong></p>
-                                <ul class="note" aria-label="キャンペーン概要">
-              <li>実施期間：2025年9月6日〜2025年10月31日</li>
+                    
+                              
+                      <ul class="note" style="margin-top:16px" aria-label="キャンペーン概要">
+              <li>📅 実施期間：2025年9月6日〜2025年10月31日</li>
             </ul>
-                    <p style="margin-top:16px">
-            <a class="cta" href="#entry">エントリーして特典を受け取る</a>
+                    <p style="margin-top:20px">
+            <a class="cta" href="#entry">🎁 エントリーして特典を受け取る</a>
           </p>
               </div>
 
@@ -64,27 +66,27 @@
     </div>
   </section>
 
-      <section class="section" id="features" aria-label="特長">
+      <section class="section" id="features" aria-labelledby="features-title">
     <div class="container">
-      <h2>選ばれる3つの理由</h2>
+      <h2 id="features-title">選ばれる3つの理由</h2>
       <div class="grid-3">
-                  <article class="card">
-            <h3>最新トレンド</h3>
+                  <article class="card" role="article" aria-labelledby="feature-0">
+            <h3 id="feature-0">最新トレンド</h3>
             <p>人気スタイリスト監修のおすすめコーデを毎週更新。</p>          </article>
-                  <article class="card">
-            <h3>おトクが続く</h3>
+                  <article class="card" role="article" aria-labelledby="feature-1">
+            <h3 id="feature-1">おトクが続く</h3>
             <p>購入金額に応じてポイントアップ。会員限定クーポンも。</p>          </article>
-                  <article class="card">
-            <h3>サイズ安心</h3>
+                  <article class="card" role="article" aria-labelledby="feature-2">
+            <h3 id="feature-2">サイズ安心</h3>
             <p>初回サイズ交換送料無料（一部対象外あり）。</p>          </article>
               </div>
     </div>
   </section>
   
-    <section class="section" id="campaign" aria-label="キャンペーン詳細">
+    <section class="section" id="campaign" aria-labelledby="campaign-title">
     <div class="container">
-      <h2>キャンペーン詳細</h2>
-      <div class="details" role="region" aria-labelledby="campaign">
+      <h2 id="campaign-title">キャンペーン詳細</h2>
+      <div class="details" role="region" aria-labelledby="campaign-title">
         <dl>
                                     <dt>期間</dt><dd>2025年9月6日（土）〜 2025年10月31日（金）</dd>
                           <dt>特典</dt><dd>エントリー＆対象購入で最大2,000ポイント</dd>
@@ -92,68 +94,114 @@
                           <dt>対象</dt><dd>期間中にエントリーのうえ、対象ブランドでの購入</dd>
                               </dl>
       </div>
-      <p class="note" style="margin-top:10px">※進呈条件・上限があります。詳細はFAQをご確認ください。</p>    </div>
+      <p class="note" style="margin-top:16px">⚠️ ※進呈条件・上限があります。詳細はFAQをご確認ください。</p>    </div>
   </section>
 
-    <section class="section" id="entry" aria-label="エントリー">
+    <section class="section" id="entry" aria-labelledby="entry-title">
     <div class="container">
-      <h2>今すぐエントリー</h2>
+      <h2 id="entry-title">🎯 今すぐエントリー</h2>
 
-              <p>以下のフォームに必要事項をご入力ください。</p>
-        <form action="https://example.com/entry" method="post" novalidate class="card" style="display:grid;gap:12px">
-          <label>
-            <span>お名前（必須）</span><br />
-            <input type="text" name="name" required aria-required="true" style="width:100%;padding:12px;border:1px solid var(--c-border);border-radius:10px" />
-          </label>
-          <label>
-            <span>メールアドレス（必須）</span><br />
-            <input type="email" name="email" required aria-required="true" style="width:100%;padding:12px;border:1px solid var(--c-border);border-radius:10px" />
-          </label>
+              <div id="form-messages" role="status" aria-live="polite"></div>
+        
+        <p style="margin-bottom:20px">以下のフォームに必要事項をご入力ください。</p>
+        
+        <form id="entry-form" action="https://example.com/entry" method="post" novalidate class="card" style="display:grid;gap:16px">
+          
+          <div class="form-field">
+            <label class="form-label" for="entry-name">
+              お名前<span class="required-badge">必須</span>
+            </label>
+            <input type="text" 
+                   id="entry-name" 
+                   name="name" 
+                   required 
+                   aria-required="true"
+                   aria-describedby="name-error"
+                   placeholder="山田 太郎" />
+            <div id="name-error" class="error-message" style="display:none" role="alert"></div>
+          </div>
 
-                                    <label>
-                <span>都道府県</span><br />
-                                  <select name="pref" style="width:100%;padding:12px;border:1px solid var(--c-border);border-radius:10px">
+          <div class="form-field">
+            <label class="form-label" for="entry-email">
+              メールアドレス<span class="required-badge">必須</span>
+            </label>
+            <input type="email" 
+                   id="entry-email" 
+                   name="email" 
+                   required 
+                   aria-required="true"
+                   aria-describedby="email-error"
+                   placeholder="example@email.com" />
+            <div id="email-error" class="error-message" style="display:none" role="alert"></div>
+          </div>
+
+                                    <div class="form-field">
+                <label class="form-label" for="entry-pref">
+                  都道府県
+                                  </label>
+                                  <select id="entry-pref" 
+                          name="pref"
+                          >
                     <option value="">選択してください</option>
                                           <option value="tokyo">東京都</option>
                                           <option value="kanagawa">神奈川県</option>
                                           <option value="chiba">千葉県</option>
                                           <option value="saitama">埼玉県</option>
                                       </select>
-                              </label>
+                                <div id="pref-error" class="error-message" style="display:none" role="alert"></div>
+              </div>
                       
-          <label style="display:flex;gap:8px;align-items:center">
-            <input type="checkbox" name="agree" value="1" required aria-required="true" />
-            <span>利用規約に同意する</span>
+          <label class="custom-checkbox">
+            <input type="checkbox" 
+                   id="entry-agree" 
+                   name="agree" 
+                   value="1" 
+                   required 
+                   aria-required="true"
+                   aria-describedby="agree-error" />
+            <span>
+              <a href="/terms" target="_blank" rel="noopener" style="text-decoration:underline">利用規約</a>および<a href="/privacy" target="_blank" rel="noopener" style="text-decoration:underline">プライバシーポリシー</a>に同意する
+            </span>
           </label>
-          <button class="cta" type="submit" style="justify-self:start">エントリーする</button>
-          <p class="note">※送信によりプライバシーポリシーに同意したものとみなします。</p>
+          <div id="agree-error" class="error-message" style="display:none" role="alert"></div>
+
+          <button class="cta" type="submit" id="submit-btn" style="justify-self:start">
+            <span id="submit-text">エントリーする</span>
+            <span id="submit-spinner" class="spinner" style="display:none"></span>
+          </button>
+          
+          <p class="note">※送信により上記ポリシーに同意したものとみなします。<br>※ご入力いただいた情報は厳重に管理いたします。</p>
         </form>
           </div>
   </section>
 
-      <section class="section faq" id="faq" aria-label="よくある質問">
+      <section class="section faq" id="faq" aria-labelledby="faq-title">
     <div class="container">
-      <h2>よくある質問</h2>
-              <details>
-          <summary>ポイントはいつ反映されますか？</summary>
-          <div style="margin-top:8px">条件達成の翌月末までに順次進呈します。</div>
+      <h2 id="faq-title">よくある質問</h2>
+              <details id="faq-0">
+          <summary aria-controls="faq-content-0" aria-expanded="false">ポイントはいつ反映されますか？</summary>
+          <div id="faq-content-0" style="margin-top:12px;line-height:1.7">条件達成の翌月末までに順次進呈します。</div>
         </details>
-              <details>
-          <summary>返品・キャンセル時はどうなりますか？</summary>
-          <div style="margin-top:8px">キャンセル・返品分は対象外となります。</div>
+              <details id="faq-1">
+          <summary aria-controls="faq-content-1" aria-expanded="false">返品・キャンセル時はどうなりますか？</summary>
+          <div id="faq-content-1" style="margin-top:12px;line-height:1.7">キャンセル・返品分は対象外となります。</div>
         </details>
-              <details>
-          <summary>既存会員も対象ですか？</summary>
-          <div style="margin-top:8px">エントリーのうえ対象購入された方が対象です。</div>
+              <details id="faq-2">
+          <summary aria-controls="faq-content-2" aria-expanded="false">既存会員も対象ですか？</summary>
+          <div id="faq-content-2" style="margin-top:12px;line-height:1.7">エントリーのうえ対象購入された方が対象です。</div>
         </details>
           </div>
   </section>
+  
+      <div class="floating-cta" id="floating-cta" style="display:none">
+    <a class="cta" href="#entry">今すぐエントリー</a>
+  </div>
   
     <footer class="footer" role="contentinfo">
     <div class="container">
       <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center">
         <div>© 2025 〇〇Inc.</div>
-        <nav style="display:flex;gap:16px">
+        <nav aria-label="フッターナビゲーション" style="display:flex;gap:16px;flex-wrap:wrap">
           <a href="/privacy" class="small">プライバシーポリシー</a>          <a href="/terms" class="small">利用規約</a>          <a href="/inquiry" class="small">お問い合わせ</a>        </nav>
       </div>
     </div>
@@ -203,6 +251,167 @@
       }
           ]
   }
+  </script>
+
+    <script>
+    (function() {
+      'use strict';
+      
+      // カウントダウンタイマー
+      const countdownEl = document.getElementById('countdown');
+      if (countdownEl) {
+        const endDate = new Date(countdownEl.dataset.endDate);
+        
+        function updateCountdown() {
+          const now = new Date();
+          const diff = endDate - now;
+          
+          if (diff <= 0) {
+            countdownEl.innerHTML = '<div class="countdown-item" style="grid-column: 1/-1"><span class="countdown-value">終了</span></div>';
+            return;
+          }
+          
+          const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+          
+          document.getElementById('days').textContent = String(days).padStart(2, '0');
+          document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+          document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+          document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+        }
+        
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+      }
+      
+      // フローティングCTAの表示制御
+      const floatingCta = document.getElementById('floating-cta');
+      const entrySection = document.getElementById('entry');
+      
+      if (floatingCta && entrySection) {
+        window.addEventListener('scroll', function() {
+          const entrySectionTop = entrySection.offsetTop;
+          const scrollPosition = window.scrollY + window.innerHeight;
+          
+          if (scrollPosition < entrySectionTop) {
+            floatingCta.style.display = 'block';
+          } else {
+            floatingCta.style.display = 'none';
+          }
+        });
+      }
+      
+      // フォームバリデーション
+      const form = document.getElementById('entry-form');
+      if (form) {
+        const submitBtn = document.getElementById('submit-btn');
+        const submitText = document.getElementById('submit-text');
+        const submitSpinner = document.getElementById('submit-spinner');
+        const formMessages = document.getElementById('form-messages');
+        
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // エラーメッセージをクリア
+          document.querySelectorAll('.error-message').forEach(el => {
+            el.style.display = 'none';
+            el.textContent = '';
+          });
+          document.querySelectorAll('.form-field').forEach(el => {
+            el.classList.remove('error');
+          });
+          
+          let hasError = false;
+          
+          // 名前のバリデーション
+          const nameInput = document.getElementById('entry-name');
+          if (!nameInput.value.trim()) {
+            showError('name', 'お名前を入力してください');
+            hasError = true;
+          }
+          
+          // メールアドレスのバリデーション
+          const emailInput = document.getElementById('entry-email');
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailInput.value.trim()) {
+            showError('email', 'メールアドレスを入力してください');
+            hasError = true;
+          } else if (!emailRegex.test(emailInput.value)) {
+            showError('email', '有効なメールアドレスを入力してください');
+            hasError = true;
+          }
+          
+          // 同意チェックボックスのバリデーション
+          const agreeInput = document.getElementById('entry-agree');
+          if (!agreeInput.checked) {
+            showError('agree', '利用規約に同意してください');
+            hasError = true;
+          }
+          
+          if (hasError) {
+            return;
+          }
+          
+          // ローディング状態
+          submitBtn.disabled = true;
+          submitText.style.display = 'none';
+          submitSpinner.style.display = 'inline-block';
+          
+          // フォーム送信（実際のエンドポイントに送信）
+          const formData = new FormData(form);
+          
+          fetch(form.action, {
+            method: 'POST',
+            body: formData
+          })
+          .then(response => response.json())
+          .then(data => {
+            if (data.success) {
+              formMessages.innerHTML = '<div class="success-message"><span style="font-size:20px">✓</span><span>エントリーが完了しました！ご登録いただいたメールアドレスに確認メールをお送りしました。</span></div>';
+              form.reset();
+              form.style.display = 'none';
+            } else {
+              throw new Error(data.message || '送信に失敗しました');
+            }
+          })
+          .catch(error => {
+            formMessages.innerHTML = '<div class="error-message">エラーが発生しました：' + error.message + '</div>';
+          })
+          .finally(() => {
+            submitBtn.disabled = false;
+            submitText.style.display = 'inline';
+            submitSpinner.style.display = 'none';
+          });
+        });
+        
+        function showError(fieldName, message) {
+          const errorEl = document.getElementById(fieldName + '-error');
+          const fieldEl = document.getElementById('entry-' + fieldName);
+          
+          if (errorEl) {
+            errorEl.textContent = message;
+            errorEl.style.display = 'block';
+          }
+          
+          if (fieldEl) {
+            fieldEl.closest('.form-field, .custom-checkbox').classList.add('error');
+            fieldEl.focus();
+          }
+        }
+      }
+      
+      // FAQのアクセシビリティ改善
+      document.querySelectorAll('.faq details').forEach(details => {
+        const summary = details.querySelector('summary');
+        details.addEventListener('toggle', function() {
+          if (summary) {
+            summary.setAttribute('aria-expanded', details.open);
+          }
+        });
+      });
+    })();
   </script>
 
 
