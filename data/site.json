@@ -3,7 +3,7 @@
     "title": "FASHION HOLIDAY CAMPAIGN | 公式LP",
     "description": "エントリー＆ご利用で最大2,000ポイント。ファッションをもっと自由に。",
     "baseUrl": "https://example.com/",
-    "copyright_year": "2025",
+    "copyright_year": "2099",
     "ogp_image": "https://placehold.co/1200x630/png?text=OGP+1200x630"
   },
   "brand": {
@@ -25,14 +25,14 @@
   "campaign": {
     "is_new": true,
     "is_ended": false,
-    "period": "2025年9月6日〜2025年10月31日",
+    "period": "2099年9月6日〜2099年10月31日",
     "copy": "エントリー＆ご利用で最大2,000ポイント",
     "benefit": "最大2,000pt進呈",
     "note": "※進呈条件・上限があります。詳細はFAQをご確認ください。",
     "ended_message": "たくさんのご参加ありがとうございました。次回キャンペーンにご期待ください。",
     "archive_url": "/archive/fashion-cp-2024",
     "details": [
-      { "term": "期間", "value": "2025年9月6日（土）〜 2025年10月31日（金）" },
+      { "term": "期間", "value": "2099年9月6日（土）〜 2099年10月31日（金）" },
       { "term": "特典", "value": "エントリー＆対象購入で最大2,000ポイント" },
       { "term": "付与時期", "value": "条件達成の翌月末までに順次付与" },
       {
